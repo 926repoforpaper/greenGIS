@@ -4,15 +4,18 @@
 
 [Alberto Gordillo](https://orcid.org/0000-0002-4742-173X)  
 
-[Félix García](https://orcid.org/0000-0001-6460-0353)
-
-[Mª Ángeles Moraga](https://orcid.org/0000-0001-9165-7144)
+[Victor Lamas](https://orcid.org/0000-0001-8960-1299)  
 
 [Coral Calero](https://orcid.org/0000-0003-0728-4176)
 
+[Mª Ángeles Moraga](https://orcid.org/0000-0001-9165-7144)
+
+[Félix García](https://orcid.org/0000-0001-6460-0353)
 
 ## Abstract
-
+Web-based Geographic Information Systems (GIS) enable the visualization and interaction with spatial data directly through a web browser. These applications can be implemented using different client–server architectures, based on raster or vector data models, each with distinct implications for processing and data transmission. Beyond functional performance, the growing environmental impact of the information technology sector positions energy efficiency as a key criterion in the design of sustainable web-based GIS.
+This article examines the relationship between functionality and energy consumption when performing map request and visualization operations across different web-based GIS architectures. To this end, three experiments are conducted at three zoom levels (medium, close, and really close) selected to represent specific use cases: an overview of a large area, an intermediate view, and a detailed close-up. In each experiment, five representative web-based GIS with different client–server architectures are compared simulating typical user interactions such as panning, zooming, and route navigation at varying levels of detail: a fully client-side, a server-driven on-demand approach, a server-assisted on-demand approach, a server-assisted on-demand delegating data serialization and preparation to the DBMS; and an hybrid approach.
+In conclusion, at the medium zoom level, full server-side rendering provides the best balance in terms of energy efficiency and response time, clearly outperforming client-side vector-based approaches; at the close zoom level, server-side rendering remains the most suitable solution despite reduced interactivity; and at the very close zoom level, the hybrid strategy offers a practical compromise, enabling client-side interaction on selected layers while maintaining competitive energy efficiency.
 ## What is this?
 
 This repository contains all the information used for this study: the measured software and the analysis files for each experiment.
@@ -51,7 +54,7 @@ This folder contains three folders, one for each experiment
 ```
 
 ## Sample Logs Folder
-
+This directory contains three CSV files, one for each experiment. Each file contains the measurement data for each test case. 
 ## Contacts and References
 
 [Green Team Alarcos](https://greenteamalarcos.uclm.es/)
