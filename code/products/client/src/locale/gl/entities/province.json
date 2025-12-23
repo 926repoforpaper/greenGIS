@@ -1,0 +1,27 @@
+{
+  "t_province": {
+    "name": "Province",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "extension": "extension",
+      "population": "population",
+      "area": "area",
+      "capital": "capital"
+    },
+    "messages": {
+      "create.success": "Province creado.",
+      "update.success": "Province actualizado.",
+      "delete.success": "Province eliminado."
+    },
+    "error": {
+      "id-exists": "Un novo province non pode ter un id",
+      "id-not-exists": "Actualizando province sen id",
+      "form-errors": "Este province non se pode gardar debido a erros no formulario."
+    },
+    "headers": {
+      "provinceFormDetail": "Province Form Detail",
+      "provinceForm": "Province Form"
+    }
+  }
+}

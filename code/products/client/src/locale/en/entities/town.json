@@ -1,0 +1,32 @@
+{
+  "t_town": {
+    "name": "Town",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "code": "code",
+      "location": "location",
+      "locationCustom.x": "location X",
+      "locationCustom.y": "location Y",
+      "population": "population",
+      "populationDate": "populationDate",
+      "region": "region",
+      "province": "province",
+      "municipality": "municipality"
+    },
+    "messages": {
+      "create.success": "Town created.",
+      "update.success": "Town updated.",
+      "delete.success": "Town deleted."
+    },
+    "error": {
+      "id-exists": "A new town cannot already have a id",
+      "id-not-exists": "Updating a town without a id",
+      "form-errors": "This town cannot be saved due to form errors."
+    },
+    "headers": {
+      "townFormDetail": "Town Form Detail",
+      "townForm": "Town Form"
+    }
+  }
+}

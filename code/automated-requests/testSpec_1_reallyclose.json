@@ -1,0 +1,12 @@
+{
+  "URL": "https://plagemis.citic.udc.es/product-2/demo/map-viewer/default/42.9285081156805/-9.262669565318653/12",
+  "headless": true,
+  "actions": [
+    {
+      "name": "trackLineString",
+      "config": {
+        "filePath": "./routes/onefourthofthe_municipalities.json"
+      }
+    }
+  ]
+}

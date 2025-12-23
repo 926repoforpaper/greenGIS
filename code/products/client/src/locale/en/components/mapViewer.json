@@ -1,0 +1,41 @@
+{
+  "mapViewer": {
+    "mapViewer": "Map Viewer",
+    "cancel": "Cancel",
+    "close": "Close",
+    "downloadFormat": "Download format",
+    "export": "Export",
+    "exportManager": "Export manager",
+    "listLayerElements": "List layer elements",
+    "margin": "Margin",
+    "portrait": "Portrait",
+    "scale": "Scale",
+    "searchInMap": "Search in map...",
+    "urlToShare": "URL to share",
+    "routeCompletationError": "Please complete or cancel route calculation first",
+    "chooseEntity": "Choose the entity that you want to list",
+    "wmsLegend": {
+      "title": "WMS Layer Legend",
+      "no-data": "There is no data available"
+    },
+    "mustSelectAnExportOption": "You must choose at least one of the export formats",
+    "addALayer": "There are no added layers. Add one ",
+    "addALayer-link": "here",
+    "map": "Map",
+    "layer-label": {
+      "OpenStreetMap-Mapnik": "OpenStreetMap.Mapnik",
+      "Esri-WorldStreetMap": "Esri.WorldStreetMap",
+      "Stamen-Terrain": "Stamen.Terrain",
+      "Stamen-TonerLite": "Stamen.TonerLite",
+      "town-location": "town-location",
+      "municipality-extension": "municipality-extension",
+      "municipality-extensionJsonDb": "municipality-extensionJsonDb",
+      "province-extension": "province-extension",
+      "region-extension": "region-extension"
+    },
+    "style-legend-label": {},
+    "map-label": {
+      "default": "Default map"
+    }
+  }
+}

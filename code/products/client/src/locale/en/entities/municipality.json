@@ -1,0 +1,28 @@
+{
+  "t_municipality": {
+    "name": "Municipality",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "ineCode": "ineCode",
+      "population": "population",
+      "extension": "extension",
+      "area": "area",
+      "capital": "capital"
+    },
+    "messages": {
+      "create.success": "Municipality created.",
+      "update.success": "Municipality updated.",
+      "delete.success": "Municipality deleted."
+    },
+    "error": {
+      "id-exists": "A new municipality cannot already have a id",
+      "id-not-exists": "Updating a municipality without a id",
+      "form-errors": "This municipality cannot be saved due to form errors."
+    },
+    "headers": {
+      "municipalityFormDetail": "Municipality Form Detail",
+      "municipalityForm": "Municipality Form"
+    }
+  }
+}

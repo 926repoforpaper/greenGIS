@@ -1,0 +1,27 @@
+{
+  "t_province": {
+    "name": "Province",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "extension": "extension",
+      "population": "population",
+      "area": "area",
+      "capital": "capital"
+    },
+    "messages": {
+      "create.success": "Province created.",
+      "update.success": "Province updated.",
+      "delete.success": "Province deleted."
+    },
+    "error": {
+      "id-exists": "A new province cannot already have a id",
+      "id-not-exists": "Updating a province without a id",
+      "form-errors": "This province cannot be saved due to form errors."
+    },
+    "headers": {
+      "provinceFormDetail": "Province Form Detail",
+      "provinceForm": "Province Form"
+    }
+  }
+}

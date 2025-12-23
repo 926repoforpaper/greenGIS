@@ -1,0 +1,98 @@
+{
+  "layers": [
+    {
+      "layerType": "tilelayer",
+      "name": "OpenStreetMap.Mapnik",
+      "options": {
+        "params": {
+          "attribution": "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+        }
+      },
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    },
+    {
+      "layerType": "tilelayer",
+      "name": "Esri.WorldStreetMap",
+      "options": {
+        "params": {
+          "attribution": "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012"
+        }
+      },
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
+    },
+    {
+      "layerType": "tilelayer",
+      "name": "Stamen.Terrain",
+      "options": {
+        "params": {
+          "attribution": "Map tiles by <a href='http://stamen.com'>Stamen Design</a>, <a href='http://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a> &mdash; Map data &copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+        },
+        "maxZoom": 18,
+        "minZoom": 0,
+        "subdomains": "abcd"
+      },
+      "url": "https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}.png"
+    },
+    {
+      "layerType": "tilelayer",
+      "name": "Stamen.TonerLite",
+      "options": {
+        "params": {
+          "attribution": "Map tiles by <a href='http://stamen.com'>Stamen Design</a>, <a href='http://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a> &mdash; Map data &copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+        },
+        "maxZoom": 20,
+        "minZoom": 0,
+        "subdomains": "abcd"
+      },
+      "url": "https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png"
+    }
+        ,
+        {
+          "layerType": "geojson",
+          "name": "town-location",
+          "form": "Town Form",
+          "availableStyles": [],
+          "url": "entities/towns/geom/location"
+        }
+        ,{
+          "layerType": "wms",
+          "name": "municipality-extension",
+          "options": {
+            "layers": [
+              "energymeasurement:t_municipality"
+            ],
+            "format": "image/png",
+            "transparent": true
+          }
+        }
+        ,{
+          "layerType": "geojson",
+          "name": "municipality-extensionJsonDb",
+          "form": "Municipality Form",
+          "availableStyles": [],
+          "url": "entities/municipalitys/geom/extensionJsonDb"
+        }
+        ,{
+          "layerType": "wms",
+          "name": "province-extension",
+          "options": {
+            "layers": [
+              "energymeasurement:t_province"
+            ],
+            "format": "image/png",
+            "transparent": true
+          }
+        }
+        ,{
+          "layerType": "wms",
+          "name": "region-extension",
+          "options": {
+            "layers": [
+              "energymeasurement:t_region"
+            ],
+            "format": "image/png",
+            "transparent": true
+          }
+        }
+  ]
+}

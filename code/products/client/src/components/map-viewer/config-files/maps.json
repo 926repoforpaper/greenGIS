@@ -1,0 +1,51 @@
+{
+  "maps": [
+    {
+      "name": "default",
+      "layerManager": "default",
+      "sortable": false,
+      "center": [
+        [41.508742458803326, -4.087890625],
+        [44.508742458803326, -12.087890625]
+      ],
+      "layers": [
+        {
+          "name": "Stamen.Terrain",
+          "baseLayer": true,
+          "order": 1
+        },
+        {
+          "name": "Stamen.TonerLite",
+          "baseLayer": true,
+          "order": 2
+        },
+        {
+          "name": "OpenStreetMap.Mapnik",
+          "baseLayer": true,
+          "order": 3
+        },
+        {
+          "name": "Esri.WorldStreetMap",
+          "baseLayer": true,
+          "order": 4
+        },
+        {
+          "name": "town-location",
+          "order": 1
+        },
+        {
+          "name": "municipality-extension",
+          "order": 2
+        },
+        {
+          "name": "province-extension",
+          "order": 3
+        },
+        {
+          "name": "region-extension",
+          "order": 4
+        }
+      ]
+    }
+  ]
+}

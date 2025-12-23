@@ -1,0 +1,19 @@
+{
+  "name": "map-interactions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "mocha": "10.7.3",
+    "selenium-webdriver": "^4.25.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^133.0.1"
+  }
+}

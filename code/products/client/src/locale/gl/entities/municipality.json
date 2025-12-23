@@ -1,0 +1,28 @@
+{
+  "t_municipality": {
+    "name": "Municipality",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "ineCode": "ineCode",
+      "population": "population",
+      "extension": "extension",
+      "area": "area",
+      "capital": "capital"
+    },
+    "messages": {
+      "create.success": "Municipality creado.",
+      "update.success": "Municipality actualizado.",
+      "delete.success": "Municipality eliminado."
+    },
+    "error": {
+      "id-exists": "Un novo municipality non pode ter un id",
+      "id-not-exists": "Actualizando municipality sen id",
+      "form-errors": "Este municipality non se pode gardar debido a erros no formulario."
+    },
+    "headers": {
+      "municipalityFormDetail": "Municipality Form Detail",
+      "municipalityForm": "Municipality Form"
+    }
+  }
+}

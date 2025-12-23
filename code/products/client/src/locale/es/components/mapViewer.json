@@ -1,0 +1,41 @@
+{
+  "mapViewer": {
+    "mapViewer": "Visor de Mapa",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "downloadFormat": "Formato de descarga",
+    "export": "Exportar",
+    "exportManager": "Gestor de exportaciones",
+    "listLayerElements": "Listar elementos de la capa",
+    "margin": "Margen",
+    "portrait": "Retrato",
+    "scale": "Escala",
+    "searchInMap": "Buscar en el mapa...",
+    "urlToShare": "URL para compartir",
+    "routeCompletationError": "Por favor, completa o cancela la ruta antes de continuar",
+    "chooseEntity": "Escoja la entidad que desea listar",
+    "wmsLegend": {
+      "title": "Leyenda Capa WMS",
+      "no-data": "No hay datos disponibles"
+    },
+    "mustSelectAnExportOption": "Debe escoger al menos uno de los formatos de exportación",
+    "addALayer": "No hay capas añadidas. Añade una ",
+    "addALayer-link": "aquí",
+    "map": "Mapa",
+    "layer-label": {
+      "OpenStreetMap-Mapnik": "OpenStreetMap.Mapnik",
+      "Esri-WorldStreetMap": "Esri.WorldStreetMap",
+      "Stamen-Terrain": "Stamen.Terrain",
+      "Stamen-TonerLite": "Stamen.TonerLite",
+      "town-location": "town-location",
+      "municipality-extension": "municipality-extension",
+      "municipality-extensionJsonDb": "municipality-extensionJsonDb",
+      "province-extension": "province-extension",
+      "region-extension": "region-extension"
+    },
+    "style-legend-label": {},
+    "map-label": {
+      "default": "Mapa por defecto"
+    }
+  }
+}

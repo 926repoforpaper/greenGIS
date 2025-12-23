@@ -1,0 +1,27 @@
+{
+  "addNewLayer": {
+    "selectService": "Choose the service that you want to explore",
+    "addNewLayerTitle": "Add layer",
+    "selectLayer": "Choose the layer that you want to add to the map",
+    "addUrlLayer": "Add new layer",
+    "addExistentLayer": "Add existent layer",
+    "url": "URL",
+    "layerName": "Layer name",
+    "add": "Add",
+    "layerRequired": "A layer should be selected",
+    "urlRequired": "The layer URL is required",
+    "layerNameRequired": "A layer name must be provided",
+    "search": "Search",
+    "close": "Close",
+    "noLayers": "There are no layers available",
+    "invalidUrl": "Invalid URL",
+    "mergeLayers": "Merge layers",
+    "newLayers": "Number of layers displayed: {layersNumber} ( {layersNames} )",
+    "prop": {
+      "title": "Title",
+      "serviceType": "Service type",
+      "keywords": "Keywords",
+      "description": "Description"
+    }
+  }
+}

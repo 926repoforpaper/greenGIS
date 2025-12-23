@@ -1,0 +1,50 @@
+include:
+  - ./product-1/docker-compose.yml
+  - ./product-2/docker-compose.yml
+  - ./product-3/docker-compose.yml
+  - ./product-4/docker-compose.yml
+  - ./product-5/docker-compose.yml
+  
+services:
+  postgres:
+    container_name: ${POSTGRES_CONTAINER_NAME}
+    build:
+      context: ./postgres
+      dockerfile: postgres.dockerfile
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASSWORD}
+      PGDATA: ${PGDATA}
+      POSTGRES_MULTIPLE_EXTENSIONS: ${POSTGRES_MULTIPLE_EXTENSIONS}
+      POSTGRES_RUN_AS_ROOT: ${POSTGRES_RUN_AS_ROOT}
+    volumes:
+      - postgres:/data/postgres
+      - ./postgres/init:/docker-entrypoint-initdb.d
+      - ../server/src/main/resources/data.sql:/docker-entrypoint-initdb.d/02-data.sql
+    ports:
+      - "5433:5432"
+    restart: on-failure
+    healthcheck:
+      test: "PGPASSWORD=${POSTGRES_PASSWORD} pg_isready -h 127.0.0.1 -U ${POSTGRES_USER} -d ${POSTGRES_DB}"
+
+  geoserver:
+    container_name: ${GEOSERVER_CONTAINER_NAME}
+    image: docker.osgeo.org/geoserver:2.24.1
+    environment:
+      - CORS_ENABLED=${GEOSERVER_CORS_ENABLED}
+      - INSTALL_EXTENSIONS=${GEOSERVER_INSTALL_EXTENSIONS}
+      - EXTRA_JAVA_OPTS=${GEOSERVER_EXTRA_JAVA_OPTS}
+      - GEOSERVER_CSRF_WHITELIST=${GEOSERVER_CSRF_WHITELIST}
+      - GEOSERVER_ADMIN_USER=${GEOSERVER_ADMIN_USER}
+      - GEOSERVER_ADMIN_PASSWORD=${GEOSERVER_ADMIN_PASSWORD}
+    volumes:
+      - /opt/ci/deployments/geoserver/data/:/opt/geoserver_data:Z
+      - /opt/ci/deployments/geoserver/additional_libs:/opt/additional_libs:Z # by mounting this we can install libs from host on startup
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+volumes:
+  postgres:
+    external: false

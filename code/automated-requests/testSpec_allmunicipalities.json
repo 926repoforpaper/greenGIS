@@ -1,0 +1,30 @@
+{
+  "URL": "https://plagemis.citic.udc.es/product-2/demo/map-viewer/default",
+  "headless": true,
+  "actions": [
+    {
+      "name": "moveTo",
+      "config": {
+        "center": [43.36234, -8.41154]
+      }
+    },
+    {
+      "name": "zoomIn",
+      "config": {
+        "repetitions": 2
+      }
+    },
+    {
+      "name": "trackLineString",
+      "config": {
+        "filePath": "./routes/all_municipalities.json"
+      }
+    },
+    {
+      "name": "zoomOut",
+      "config": {
+        "repetitions": 4
+      }
+    }
+  ]
+}

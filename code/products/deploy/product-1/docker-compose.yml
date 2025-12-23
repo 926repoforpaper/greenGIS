@@ -1,0 +1,48 @@
+services:
+  p1-server:
+    container_name: ${SERVER_CONTAINER_NAME}
+    build:
+      context: ../../server
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    environment:
+      - SPRING_DATASOURCE_HOST=${POSTGRES_CONTAINER_NAME}
+      - SPRING_DATASOURCE_DATABASE=${POSTGRES_DB}
+      - SPRING_DATASOURCE_USERNAME=${POSTGRES_USER}
+      - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
+      - PROPERTIES_CLIENTHOST=${SERVER_CLIENTHOST}
+      - GEOSERVER_ACTIVE=false
+    volumes:
+      - ./layers.json:/app/server/src/main/resources/geoserver/layers.json
+
+  p1-client:
+    container_name: ${CLIENT_CONTAINER_NAME}
+    build:
+      context: ../../client
+      dockerfile: Dockerfile
+    volumes:
+      - p1-volume-client:/app/client/dist
+      - ./.env.production:/app/client/.env.production
+      - ./vue.config.js:/app/client/vue.config.js
+      - ./layers.json:/app/client/src/components/map-viewer/config-files/layers.json
+
+  p1-nginx:
+    container_name: ${NGINX_CONTAINER_NAME}
+    build:
+      context: ../nginx
+      dockerfile: nginx.dockerfile
+    depends_on:
+      p1-client:
+        condition: service_completed_successfully
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - p1-volume-client:/app/client/dist
+    ports:
+      - "81:80"
+    restart: unless-stopped
+
+
+volumes:
+  p1-volume-client:

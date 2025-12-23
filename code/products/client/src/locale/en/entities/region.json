@@ -1,0 +1,27 @@
+{
+  "t_region": {
+    "name": "Region",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "extension": "extension",
+      "population": "population",
+      "area": "area",
+      "capital": "capital"
+    },
+    "messages": {
+      "create.success": "Region created.",
+      "update.success": "Region updated.",
+      "delete.success": "Region deleted."
+    },
+    "error": {
+      "id-exists": "A new region cannot already have a id",
+      "id-not-exists": "Updating a region without a id",
+      "form-errors": "This region cannot be saved due to form errors."
+    },
+    "headers": {
+      "regionFormDetail": "Region Form Detail",
+      "regionForm": "Region Form"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "layerManager": {
+    "title": "Layer Manager",
+    "name": "Name",
+    "center": "Center",
+    "legend": "Legend",
+    "order": "Order",
+    "opacity": "Opacity",
+    "download": "Download",
+    "layerNotAvailable": "Layer not available for downloading",
+    "style": "Style",
+    "wms-style": {
+      "newStyle": "New style",
+      "styleName": "Style Name",
+      "fillColor": "Fill color",
+      "color": "Color",
+      "fill": "Fill",
+      "stroke": "Stroke",
+      "transparent": "Transparent",
+      "strokeColor": "Stroke color",
+      "form-error": "This style cannot be saved due to form errors.",
+      "apply": "Apply",
+      "geometryType": "Geometry Type"
+    },
+    "edit": "Edit external layer",
+    "delete": "Delete external layer",
+    "nameRequired": "A layer name must be provided",
+    "editLayer": "Edit name",
+    "geometryTypeRequired": "A geometry type must be provided"
+  }
+}

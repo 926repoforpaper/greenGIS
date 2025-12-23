@@ -1,0 +1,501 @@
+{
+  "features": [
+    "GEMA_SPL",
+    "DataManagement",
+    "GraphicalUserInterface",
+    "MapViewer",
+    "Tools",
+    "DM_SpatialDatabase",
+    "DM_GenerationType",
+    "DM_DataServer",
+    "MV_MapServer",
+    "MV_Tools",
+    "MV_MapManagement",
+    "DM_SD_PostGIS",
+    "MV_MM_UniqueMapViewer",
+    "MV_MM_UMV_MapCenter",
+    "MV_MM_UMV_MC_BBox",
+    "GUI_Menu",
+    "GUI_M_Top",
+    "MV_DetailOnClick",
+    "GUI_M_Position",
+    "MV_LayerManagement",
+    "MV_LM_Order",
+    "DM_GT_Sequence",
+    "MV_LM_BaseLayerSelector",
+    "MV_LM_CenterViewOnLayer",
+    "MV_LM_HideLayer",
+    "MV_LM_Opacity",
+    "MV_LM_Style",
+    "MV_LM_ExternalLayer",
+    "MV_LM_StylePreview",
+    "D_C_Postgres",
+    "D_Containers",
+    "Deploy",
+    "D_C_Nginx",
+    "MV_MS_GeoJSON",
+    "MV_MS_GJ_Cached",
+    "D_C_Geoserver",
+    "MV_MS_GeoServer",
+    "GUI_Forms",
+    "T_GIS"
+  ],
+  "data": {
+    "basicData": {
+      "index": {
+        "component": "STATIC",
+        "view": "welcome"
+      },
+      "languages": [
+        "en",
+        "es",
+        "gl"
+      ],
+      "name": "Energy measurement",
+      "packageInfo": {
+        "artifact": "energymeasurement",
+        "group": "es.udc.lbd.gisspl"
+      },
+      "database": {},
+      "extra": {},
+      "SRID": "4326",
+      "version": "0.1.0"
+    },
+    "dataModel": {
+      "enums": [],
+      "entities": [
+        {
+          "name": "Town",
+          "properties": [
+            {
+              "name": "id",
+              "class": "Long (autoinc)",
+              "pk": true,
+              "required": true,
+              "unique": true
+            },
+            {
+              "name": "name",
+              "class": "String"
+            },
+            {
+              "name": "code",
+              "class": "Integer"
+            },
+            {
+              "name": "location",
+              "class": "Point"
+            },
+            {
+              "name": "population",
+              "class": "Double",
+              "patternType": null,
+              "pattern": null
+            },
+            {
+              "name": "populationDate",
+              "class": "Date"
+            },
+            {
+              "name": "region",
+              "class": "Region",
+              "owner": false,
+              "bidirectional": "capital",
+              "multiple": false,
+              "required": false
+            },
+            {
+              "name": "province",
+              "class": "Province",
+              "owner": false,
+              "bidirectional": "capital",
+              "multiple": false,
+              "required": false
+            },
+            {
+              "name": "municipality",
+              "class": "Municipality",
+              "owner": false,
+              "bidirectional": "capital",
+              "multiple": false,
+              "required": false
+            }
+          ],
+          "displayString": "$id"
+        },
+        {
+          "name": "Municipality",
+          "properties": [
+            {
+              "name": "id",
+              "class": "Long (autoinc)",
+              "pk": true,
+              "required": true,
+              "unique": true
+            },
+            {
+              "name": "name",
+              "class": "String"
+            },
+            {
+              "name": "ineCode",
+              "class": "String"
+            },
+            {
+              "name": "population",
+              "class": "Integer"
+            },
+            {
+              "name": "extension",
+              "class": "MultiPolygon"
+            },
+            {
+              "name": "area",
+              "class": "Double",
+              "patternType": null,
+              "pattern": null
+            },
+            {
+              "name": "capital",
+              "class": "Town",
+              "owner": true,
+              "bidirectional": "municipality",
+              "multiple": false,
+              "required": false
+            }
+          ],
+          "displayString": "$id"
+        },
+        {
+          "name": "Province",
+          "properties": [
+            {
+              "name": "id",
+              "class": "Long (autoinc)",
+              "pk": true,
+              "required": true,
+              "unique": true
+            },
+            {
+              "name": "name",
+              "class": "String"
+            },
+            {
+              "name": "extension",
+              "class": "MultiPolygon"
+            },
+            {
+              "name": "population",
+              "class": "Double",
+              "patternType": null,
+              "pattern": null
+            },
+            {
+              "name": "area",
+              "class": "Double",
+              "patternType": null,
+              "pattern": null
+            },
+            {
+              "name": "capital",
+              "class": "Town",
+              "owner": true,
+              "bidirectional": "province",
+              "multiple": false,
+              "required": false
+            }
+          ],
+          "displayString": "$id"
+        },
+        {
+          "name": "Region",
+          "properties": [
+            {
+              "name": "id",
+              "class": "Long (autoinc)",
+              "pk": true,
+              "required": true,
+              "unique": true
+            },
+            {
+              "name": "name",
+              "class": "String"
+            },
+            {
+              "name": "extension",
+              "class": "MultiPolygon"
+            },
+            {
+              "name": "population",
+              "class": "Double",
+              "patternType": null,
+              "pattern": null
+            },
+            {
+              "name": "area",
+              "class": "Double",
+              "patternType": null,
+              "pattern": null
+            },
+            {
+              "name": "capital",
+              "class": "Town",
+              "owner": true,
+              "bidirectional": "region",
+              "multiple": false,
+              "required": false
+            }
+          ],
+          "displayString": "$id"
+        }
+      ]
+    },
+    "forms": [
+      {
+        "id": "Town Form",
+        "properties": [
+          {
+            "property": "id",
+            "viewing": true,
+            "editing": false,
+            "owner": "Town"
+          },
+          {
+            "property": "name",
+            "viewing": true,
+            "editing": true,
+            "owner": "Town"
+          },
+          {
+            "property": "code",
+            "viewing": true,
+            "editing": true,
+            "owner": "Town"
+          },
+          {
+            "property": "population",
+            "viewing": true,
+            "editing": true,
+            "owner": "Town"
+          },
+          {
+            "property": "populationDate",
+            "viewing": true,
+            "editing": true,
+            "owner": "Town"
+          },
+          {
+            "property": "location",
+            "viewing": true,
+            "editing": true,
+            "owner": "Town"
+          }
+        ],
+        "entity": "Town",
+        "creatable": false,
+        "editable": false,
+        "removable": false,
+        "confirmation": false
+      },
+      {
+        "id": "Municipality Form",
+        "properties": [
+          {
+            "property": "id",
+            "viewing": true,
+            "editing": false,
+            "owner": "Municipality"
+          },
+          {
+            "property": "name",
+            "viewing": true,
+            "editing": true,
+            "owner": "Municipality"
+          },
+          {
+            "property": "ineCode",
+            "viewing": true,
+            "editing": true,
+            "owner": "Municipality"
+          },
+          {
+            "property": "population",
+            "viewing": true,
+            "editing": true,
+            "owner": "Municipality"
+          },
+          {
+            "property": "area",
+            "viewing": true,
+            "editing": true,
+            "owner": "Municipality"
+          },
+          {
+            "property": "capital",
+            "viewing": true,
+            "editing": true,
+            "owner": "Municipality"
+          },
+          {
+            "property": "extension",
+            "viewing": true,
+            "editing": true,
+            "owner": "Municipality"
+          }
+        ],
+        "entity": "Municipality",
+        "creatable": false,
+        "editable": false,
+        "removable": false,
+        "confirmation": false
+      },
+      {
+        "id": "Province Form",
+        "properties": [
+          {
+            "property": "id",
+            "viewing": true,
+            "editing": false,
+            "owner": "Province"
+          },
+          {
+            "property": "name",
+            "viewing": true,
+            "editing": true,
+            "owner": "Province"
+          },
+          {
+            "property": "population",
+            "viewing": true,
+            "editing": true,
+            "owner": "Province"
+          },
+          {
+            "property": "area",
+            "viewing": true,
+            "editing": true,
+            "owner": "Province"
+          },
+          {
+            "property": "capital",
+            "viewing": true,
+            "editing": true,
+            "owner": "Province"
+          },
+          {
+            "property": "extension",
+            "viewing": true,
+            "editing": true,
+            "owner": "Province"
+          }
+        ],
+        "entity": "Province",
+        "creatable": false,
+        "editable": false,
+        "removable": false,
+        "confirmation": false
+      },
+      {
+        "id": "Region Form",
+        "properties": [
+          {
+            "property": "id",
+            "viewing": true,
+            "editing": false,
+            "owner": "Region"
+          },
+          {
+            "property": "name",
+            "viewing": true,
+            "editing": true,
+            "owner": "Region"
+          },
+          {
+            "property": "population",
+            "viewing": true,
+            "editing": true,
+            "owner": "Region"
+          },
+          {
+            "property": "area",
+            "viewing": true,
+            "editing": true,
+            "owner": "Region"
+          },
+          {
+            "property": "capital",
+            "viewing": true,
+            "editing": true,
+            "owner": "Region"
+          },
+          {
+            "property": "extension",
+            "viewing": true,
+            "editing": true,
+            "owner": "Region"
+          }
+        ],
+        "entity": "Region",
+        "creatable": false,
+        "editable": false,
+        "removable": false,
+        "confirmation": false
+      }
+    ],
+    "gui": {
+      "settings": {
+        "font": {
+          "family": "Arial",
+          "size": "14px"
+        },
+        "colorset": [
+          "#fff",
+          "#eee",
+          "#777",
+          "#555",
+          "#577492",
+          "#333",
+          "#222"
+        ],
+        "header": {
+          "type": "Text",
+          "text": "Energy measurement"
+        }
+      },
+      "design": "1"
+    },
+    "lists": [],
+    "menus": [
+      {
+        "id": "top",
+        "elements": [
+          {
+            "id": "Components",
+            "type": "MENU",
+            "elements": [
+              {
+                "id": "Map viewer",
+                "type": "VIEW",
+                "view": {
+                  "component": "MAP",
+                  "view": "mapViewer"
+                }
+              }
+            ],
+            "access": {
+              "admin": true,
+              "logged": true
+            }
+          }
+        ]
+      }
+    ],
+    "mapViewer": {},
+    "statics": [
+      {
+        "id": "Home",
+        "html": "<h1 style=\"text-align: center\">Welcome to Trajectory exploitation Deploy</h1>"
+      }
+    ]
+  }
+}

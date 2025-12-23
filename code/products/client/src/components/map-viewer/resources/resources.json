@@ -1,0 +1,10 @@
+[
+  "WMS",
+  "WCS",
+  "GeoTIFF",
+  "GeoJSON",
+  "GeoParquet",
+  "GeoPackage",
+  "Shapefile",
+  "ArcGIS"
+]

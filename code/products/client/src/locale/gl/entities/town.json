@@ -1,0 +1,32 @@
+{
+  "t_town": {
+    "name": "Town",
+    "prop": {
+      "id": "id",
+      "name": "name",
+      "code": "code",
+      "location": "location",
+      "locationCustom.x": "location X",
+      "locationCustom.y": "location Y",
+      "population": "population",
+      "populationDate": "populationDate",
+      "region": "region",
+      "province": "province",
+      "municipality": "municipality"
+    },
+    "messages": {
+      "create.success": "Town creado.",
+      "update.success": "Town actualizado.",
+      "delete.success": "Town eliminado."
+    },
+    "error": {
+      "id-exists": "Un novo town non pode ter un id",
+      "id-not-exists": "Actualizando town sen id",
+      "form-errors": "Este town non se pode gardar debido a erros no formulario."
+    },
+    "headers": {
+      "townFormDetail": "Town Form Detail",
+      "townForm": "Town Form"
+    }
+  }
+}

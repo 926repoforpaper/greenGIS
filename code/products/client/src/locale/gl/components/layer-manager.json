@@ -1,0 +1,31 @@
+{
+  "layerManager": {
+    "title": "Organizador de capas",
+    "name": "Nome",
+    "center": "Centrar",
+    "legend": "Lenda",
+    "order": "Ordear",
+    "opacity": "Opacidade",
+    "download": "Descargar",
+    "layerNotAvailable": "Capa non dispoñible para descarga",
+    "style": "Estilo",
+    "wms-style": {
+      "newStyle": "Novo estilo",
+      "styleName": "Nome do estilo",
+      "fillColor": "Cor de recheo",
+      "color": "Cor",
+      "fill": "Recheo",
+      "stroke": "Trazo",
+      "transparent": "Transparente",
+      "strokeColor": "Cor do trazo",
+      "form-error": "Este estilo non se pode gardar debido a erros de formulario.",
+      "apply": "Aplicar",
+      "geometryType": "Tipo de geometría"
+    },
+    "edit": "Editar a capa exterior",
+    "delete": "Eliminar a capa exterior",
+    "nameRequired": "É obrigatorio indicar un nome",
+    "editLayer": "Editar nome",
+    "geometryTypeRequired": "É obrigatorio indicar un tipo de geometría"
+  }
+}
