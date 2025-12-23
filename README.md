@@ -27,7 +27,7 @@ The repository also includes the resulting empirical results and some samples of
 This folder contains three main folders: code, empirical results and sample logs.
 
 ## Code Folder
-This folder contains the software under test. It consists of a web application that has a single codebase and five possible deployment configurations. These configurations are set up to be launched simultaneously or individually, depending on the needs of the production or development environment.
+This folder contains the software under test. It consists of a web application that has a single codebase and five possible deployment configurations. These configurations are set up to be launched simultaneously or individually, depending on the needs of the production or development environment. More details about the code structure and deployment instructions can be found in the `code/README.md` file.
 
 ## Empirical Results Folder
 This folder contains three folders, one for each experiment
