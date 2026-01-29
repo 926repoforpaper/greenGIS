@@ -1,16 +1,4 @@
-# Title
-
-[Miguel R. Luaces](https://orcid.org/0000-0003-0549-2000)
-
-[Alberto Gordillo](https://orcid.org/0000-0002-4742-173X)  
-
-[Victor Lamas](https://orcid.org/0000-0001-8960-1299)  
-
-[Coral Calero](https://orcid.org/0000-0003-0728-4176)
-
-[Mª Ángeles Moraga](https://orcid.org/0000-0001-9165-7144)
-
-[Félix García](https://orcid.org/0000-0001-6460-0353)
+# Studying the energy consumption of Web-based Geographic Information Systems
 
 ## Abstract
 Web-based Geographic Information Systems (GIS) enable the visualization and interaction with spatial data directly through a web browser. These applications can be implemented using different client–server architectures, based on raster or vector data models, each with distinct implications for processing and data transmission. Beyond functional performance, the growing environmental impact of the information technology sector positions energy efficiency as a key criterion in the design of sustainable web-based GIS.
@@ -55,6 +43,3 @@ This folder contains three folders, one for each experiment
 
 ## Sample Logs Folder
 This directory contains three CSV files, one for each experiment. Each file contains the measurement data for each test case. 
-## Contacts and References
-
-[Green Team Alarcos](https://greenteamalarcos.uclm.es/)
